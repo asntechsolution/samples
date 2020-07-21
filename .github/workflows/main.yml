@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-    
     - name: Sync
       env:
         dest: 'deploy@13.55.12.1:/home/deploy/www'
