@@ -2,11 +2,15 @@ name: Deployment
 
 on:
   push:
-    branches: [ master ]
-    
+    branches: [ production ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
     - name: Sync
       env:
-        dest: 'deploy@13.55.12.1:/home/deploy/www’
+        dest: 'deploy@13.55.12.1:/home/deploy/www'
       run: |
         echo "${{secrets.DEPLOY_KEY}}" > deploy_key
         chmod 600 ./deploy_key
