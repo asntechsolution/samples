@@ -24,7 +24,7 @@ jobs:
     
     - name: Sync
       env:
-        dest: 'deploy@13.55.12.1:/home/deploy/www'
+        dest: 'ssh-w01a4f90@w01a4f90.kasserver.com:/www/htdocs/w01a4f90/github-actions-wordpress-theme-deployment.blee.ch/wp-content/themes/flynt'
       run: |
         echo "${{secrets.DEPLOY_KEY}}" > deploy_key
         chmod 600 ./deploy_key
